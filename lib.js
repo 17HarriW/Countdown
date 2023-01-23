@@ -3,13 +3,18 @@ const elements = {
     start: document.getElementById("btn-start"),
     reset: document.getElementById("btn-reset")
 }
+const re = /(\d+)[:](\d+)[:](\d+)/;
+
+var timerHours = re.match(timer.value);
 
 let running = false;
 
 function start() {
     running = !running;
     elements.start.innerText = running ? "Stop" : "Start";
-    console.log(running);
+    console.log(timerSecs);
+    console.log(timerMins);
+    console.log(timerHours);
 }
 
 
